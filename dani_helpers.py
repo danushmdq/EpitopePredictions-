@@ -83,3 +83,13 @@ def formatHLA(h):
         lh = digits[0]
         rh = digits[1]
     return 'HLA-{locus}*{lh}:{rh}'.format(locus=locus, lh=lh, rh=rh)
+
+def hlatoafg(h):
+
+    """ HLA-A*02:01      A_0201"""
+
+    h= h.replace("HLA-","")
+    h= h.replace(":","")
+    h= h.replace("*","_")
+
+    return h
